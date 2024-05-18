@@ -1,8 +1,10 @@
-# ignore ALL node modules
+# directories
+.DS_Store
 node_modules/
-
-# ignore ALL .log files
-*.log
-
-# ignore ALL files in ANY directory named temp
+dist/
 temp/
+
+# filetypes
+*.log
+*.env
+
