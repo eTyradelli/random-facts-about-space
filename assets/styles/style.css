@@ -695,7 +695,7 @@ aside.active .little-bubble-two {
 }
 
 .modal-popup-inner {
-  width: clamp(600px, 50%, 90vw);
+  width: clamp(600px, 50%, 60vw);
   overflow-y: auto;
   max-height: 95vh;
   background: hsl(var(--clr-blue-medium));
