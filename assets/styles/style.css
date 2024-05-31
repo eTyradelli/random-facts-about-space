@@ -43,7 +43,7 @@
 @media (max-width: 40.625em) {
   :root {
     /* font-sizes */
-    --fs-600: 1.1rem;
+    --fs-600: 1.15rem;
   }
 }
 
@@ -117,9 +117,15 @@ body {
   overflow: visible;
 }
 
+@media (max-width: 40.625em) {
+  body {
+    padding: 14px;
+  }
+}
+
 h1 {
   text-align: center;
-  padding: 3.5rem 0 3rem;
+  padding: 2rem 0 3rem;
   margin: 0;
   font-size: var(--fs-900);
   letter-spacing: 1px;
@@ -559,6 +565,11 @@ aside.active .little-bubble-two {
 }
 
 @media (max-width: 40.625em) {
+  .card {
+    grid-template-rows: 60px 230px 40px 100px max-content;
+    padding: 24px;
+  }
+
   .card:hover {
     transform: translateY(0px);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);

@@ -153,6 +153,40 @@ function filterItms(e) {
   }
 }
 
+// Viewd item functions
+
+function isViewed(el) {
+  const itemUrl = el.closest(".card").dataset.uniqueUrl;
+  const arrIdx = viewedItems.findIndex((el) => el === itemUrl);
+  return arrIdx;
+}
+
+function setViewedItem(el) {
+  const idx = isViewed(el);
+  if (idx === -1) {
+    const card = el.closest(".card");
+    if (!card.classList.contains("viewed")) {
+      toggleActive(card, "viewed");
+    }
+    const viewedUrl = card.dataset.uniqueUrl;
+    viewedItems.push(viewedUrl);
+    localStorage.removeItem(`viewedItems`);
+    localStorage.setItem(`viewedItems`, JSON.stringify(viewedItems));
+  } else {
+    return;
+  }
+}
+
+function loadViewedItems() {
+  cards.forEach((card) => {
+    viewedItems.forEach((item) => {
+      if (card.dataset.uniqueUrl === item) {
+        card.classList.add("viewed");
+      }
+    });
+  });
+}
+
 // Other functions
 
 function toggleActive(element, className = "active", isActive = "") {

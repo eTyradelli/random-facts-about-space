@@ -14,37 +14,37 @@ let viewedItems =
     ? [...JSON.parse(localStorage.getItem("viewedItems"))]
     : [];
 
-function isViewed(el) {
-  const itemUrl = el.closest(".card").dataset.uniqueUrl;
-  const arrIdx = viewedItems.findIndex((el) => el === itemUrl);
-  return arrIdx;
-}
+// function isViewed(el) {
+//   const itemUrl = el.closest(".card").dataset.uniqueUrl;
+//   const arrIdx = viewedItems.findIndex((el) => el === itemUrl);
+//   return arrIdx;
+// }
 
-function setViewedItem(el) {
-  const idx = isViewed(el);
-  if (idx === -1) {
-    const card = el.closest(".card");
-    if (!card.classList.contains("viewed")) {
-      toggleActive(card, "viewed");
-    }
-    const viewedUrl = card.dataset.uniqueUrl;
-    viewedItems.push(viewedUrl);
-    localStorage.removeItem(`viewedItems`);
-    localStorage.setItem(`viewedItems`, JSON.stringify(viewedItems));
-  } else {
-    return;
-  }
-}
+// function setViewedItem(el) {
+//   const idx = isViewed(el);
+//   if (idx === -1) {
+//     const card = el.closest(".card");
+//     if (!card.classList.contains("viewed")) {
+//       toggleActive(card, "viewed");
+//     }
+//     const viewedUrl = card.dataset.uniqueUrl;
+//     viewedItems.push(viewedUrl);
+//     localStorage.removeItem(`viewedItems`);
+//     localStorage.setItem(`viewedItems`, JSON.stringify(viewedItems));
+//   } else {
+//     return;
+//   }
+// }
 
-function loadViewedItems() {
-  cards.forEach((card) => {
-    viewedItems.forEach((item) => {
-      if (card.dataset.uniqueUrl === item) {
-        card.classList.add("viewed");
-      }
-    });
-  });
-}
+// function loadViewedItems() {
+//   cards.forEach((card) => {
+//     viewedItems.forEach((item) => {
+//       if (card.dataset.uniqueUrl === item) {
+//         card.classList.add("viewed");
+//       }
+//     });
+//   });
+// }
 
 // Event listeners
 const query = matchMedia("(max-width: 790px)");
@@ -93,14 +93,3 @@ const observer = new IntersectionObserver(obsrvrCllbck, options);
 // Make first request
 
 getData();
-
-// Maybe use userAgentData for responsive behaviour?
-
-// Fix sidebar behaviour on mobile -> landscape.
-
-// Refactor code:
-// Make better toggling function for all use cases.
-// Mutation observer. Where do I need it?
-// Resize observer. Where do I need it?
-// Check if body is better set as grid, to make sidebar behaviour with grid + css.
-// Split JS into files
