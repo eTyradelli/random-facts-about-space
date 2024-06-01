@@ -1,6 +1,6 @@
 ## Overview
 
-This is a purely frontend website that I build to better understant various aspects of JavaScript:
+This is a purely frontend website that I build to better understant various aspects of JavaScript. The live version of [Random Facts About Space](https://etyradelli.github.io/random-facts-about-space/) is hosted on Github Pages.
 
 ## Features
 
