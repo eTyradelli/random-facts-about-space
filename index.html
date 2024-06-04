@@ -103,21 +103,21 @@
         <div class="form-field">
           <input type="text" id="name" name="name" class="form-user-input" required>
           <label for="name">Name <span aria-hidden="true">*</span></label>
+          <div class="error-message form-submit-message"></div>
         </div>
         <div class="form-field">
           <input type="email" id="email" name="email" class="form-user-input" required>
           <label for="email">Email <span aria-hidden="true">*</span></label>
+          <div class="error-message form-submit-message"></div>
         </div>
         <div class="form-field">
           <textarea id="message" name="message" class="form-user-input" required></textarea>
           <label for="message">Message <span aria-hidden="true">*</span></label>
+          <div class="error-message form-submit-message"></div>
         </div>
         <input type="submit" id="submit" value="Send">
       </form>
 
-      <div id="form-submit-missing-message" class="form-submit-message missing">
-        <p>All fields are mandatory. Please try again.</p>
-      </div>
       <div id="form-submit-success-message" class="form-submit-message success">
         <p>Thank you! Your message has been sent.</p>
         <p>Check your inbox for an automated response.</p>

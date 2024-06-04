@@ -1201,7 +1201,7 @@ input:-webkit-autofill:focus {
   background: hsl(var(--clr-message-red) / 0.6);
 }
 
-.form-submit-message.missing {
+.form-submit-message.error-message {
   background: hsl(var(--clr-purple-accent) / 0.8);
 }
 
