@@ -20,7 +20,7 @@ const query = matchMedia("(max-width: 790px)");
 query.addEventListener("change", () => {
   toggleActive(navToggle, "active", true);
   toggleActive(sideBar, "active", true);
-  if ((body.style.overflow = "hidden")) {
+  if (body.style.overflow === "hidden") {
     body.style.overflow = "visible";
   }
 });
