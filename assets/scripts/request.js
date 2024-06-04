@@ -1,3 +1,5 @@
+"use strict";
+
 const URL = "https://api.nasa.gov/planetary/apod";
 const API_KEY = "yB4JDNwsQjD2YGA4SiM5u4IIdrUGzwSIlm1eX9fu";
 const count = 12;

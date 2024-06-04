@@ -1,5 +1,6 @@
+"use strict";
+
 // This is populated everytime getData() is called.
-// This way, variable is global and new cards are always added to it.
 let cards;
 const pinnedItems =
   localStorage.getItem("pinnedItems") !== null
@@ -13,38 +14,6 @@ let viewedItems =
   localStorage.getItem("viewedItems") !== null
     ? [...JSON.parse(localStorage.getItem("viewedItems"))]
     : [];
-
-// function isViewed(el) {
-//   const itemUrl = el.closest(".card").dataset.uniqueUrl;
-//   const arrIdx = viewedItems.findIndex((el) => el === itemUrl);
-//   return arrIdx;
-// }
-
-// function setViewedItem(el) {
-//   const idx = isViewed(el);
-//   if (idx === -1) {
-//     const card = el.closest(".card");
-//     if (!card.classList.contains("viewed")) {
-//       toggleActive(card, "viewed");
-//     }
-//     const viewedUrl = card.dataset.uniqueUrl;
-//     viewedItems.push(viewedUrl);
-//     localStorage.removeItem(`viewedItems`);
-//     localStorage.setItem(`viewedItems`, JSON.stringify(viewedItems));
-//   } else {
-//     return;
-//   }
-// }
-
-// function loadViewedItems() {
-//   cards.forEach((card) => {
-//     viewedItems.forEach((item) => {
-//       if (card.dataset.uniqueUrl === item) {
-//         card.classList.add("viewed");
-//       }
-//     });
-//   });
-// }
 
 // Event listeners
 const query = matchMedia("(max-width: 790px)");
@@ -87,9 +56,5 @@ function obsrvrCllbck(entries) {
 }
 
 const observer = new IntersectionObserver(obsrvrCllbck, options);
-
-////////////
-////////////
-// Make first request
 
 getData();

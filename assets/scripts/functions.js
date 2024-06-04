@@ -1,3 +1,5 @@
+"use strict";
+
 // Functions HTML creation
 
 function loadPinnedItems() {
@@ -230,6 +232,12 @@ function clickCallBack(e) {
     toggleScroll(body, modalPopup);
     populatePopup(el);
     setViewedItem(el);
+  } else if (el.classList.contains("open-contact")) {
+    toggleActive(sideBarMain);
+    toggleActive(sideBarContactForm);
+  } else if (el.classList.contains("close-contact")) {
+    toggleActive(sideBarMain);
+    toggleActive(sideBarContactForm);
   } else {
     return;
   }

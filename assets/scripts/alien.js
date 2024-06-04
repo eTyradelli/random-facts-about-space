@@ -1,8 +1,11 @@
+"use strict";
+
 // Alien Stuff
 const humanText = ["Hello there!", "I'm E. T.", "Let's connect!"];
 const symbols = "∩⌠≡±∟¤×Ø▬○⌡•⦿∘┴⍎⍝⍠ˡ～ˠ⥷⭄⥑⥐⥏⥎⥍⥰☌⇊⇇⇈⇉°✳✣";
 const symbolsLength = symbols.length;
 let isTranslated = false;
+let do_cycles = false;
 
 function createText() {
   const pars = [];

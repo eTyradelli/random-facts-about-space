@@ -12,16 +12,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/style.css" />
   <title>Random facts about space | Home</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "XCYRxG1fSHbaBeNhT",
+      });
+    })();
+  </script>
+
   <script defer src="./assets/scripts/globals.js"></script>
   <script defer src="./assets/scripts/functions.js"></script>
+  <script defer src="./assets/scripts/contactForm.js"></script>
   <script defer src="./assets/scripts/alien.js"></script>
   <script defer src="./assets/scripts/request.js"></script>
   <script defer src="./assets/scripts/app.js"></script>
 
+
+
 </head>
 
 <body id="body" style="overflow: visible">
-  <header id="header">
+  <header id="header" class="logo">
     <div id="logo" class="logo">
       <img src="./assets/images/full-moon.svg" alt="" id="logo-img">
     </div>
@@ -56,25 +68,55 @@
   </div>
 
   <aside id="aside" class="">
-    <div id="socials" class="socials">
-      <p>This website is a WIP, made with love and with the help of <a href="https://apod.nasa.gov/apod/astropix.html"
-          target="_blank">APOD</a>.</p>
-      <!-- <p><a href="">See the source code on GitHub.</a></p> -->
-      <h2 class="about">
-        Connect with me:
-      </h2>
-      <a href="https://github.com/eTyradelli" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/eleanatyradelli/" target="_blank"><i
-          class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-    <div id="speech-bubble" class="speech-bubble">
-      <div id="speech-container">
+    <div id="aside-main" class="aside-main active">
+      <div id="socials" class="socials">
+        <p>This website is a WIP, made with love and with the help of <a href="https://apod.nasa.gov/apod/astropix.html"
+            target="_blank">APOD</a>.</p>
+        <!-- <p><a href="">See the source code on GitHub.</a></p> -->
+        <h2 class="about">
+          Connect with me:
+        </h2>
+        <a href="https://www.linkedin.com/in/eleanatyradelli/" target="_blank"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/eTyradelli" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://codepen.io/eTyradelli" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+
+        <h2 class="about">
+          Or message me:
+        </h2>
+        <a href="#" id="open-contact" class="open-contact"><span class="open-contact">Open contact form </span><i
+            class="fa-solid fa-chevron-right open-contact"></i></a>
       </div>
-      <button id="translate">Translate</button>
+      <div id="speech-bubble" class="speech-bubble">
+        <div id="speech-container">
+        </div>
+        <button id="translate">Translate</button>
+      </div>
+      <div class="little-bubble little-bubble-one"></div>
+      <div class="little-bubble little-bubble-two"></div>
+      <img src="./assets/images/extraterrestrial.svg" alt="" class="alien">
     </div>
-    <div class="little-bubble little-bubble-one"></div>
-    <div class="little-bubble little-bubble-two"></div>
-    <img src="./assets/images/extraterrestrial.svg" alt="" class="alien">
+    <div id="aside-contact-form" class="aside-contact-form ">
+      <a href="#" class="close-contact"><i class="fa-solid fa-chevron-left close-contact"></i><span
+          class="close-contact"> Back</span></a>
+      <h2>Send me a message</h2>
+
+      <form id="contact-form" autocomplete="on" class="contact-form">
+        <div class="form-field">
+          <input type="text" id="name" name="name" class="form-user-input" required>
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+        </div>
+        <div class="form-field">
+          <input type="email" id="email" name="email" class="form-user-input" required>
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+        </div>
+        <div class="form-field">
+          <textarea id="message" name="message" class="form-user-input" required></textarea>
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+        </div>
+        <input type="submit" id="submit" value="Send">
+      </form>
+    </div>
   </aside>
 
   <footer id="footer">
