@@ -23,12 +23,10 @@
 
   <script defer src="./assets/scripts/globals.js"></script>
   <script defer src="./assets/scripts/functions.js"></script>
-  <script defer src="./assets/scripts/contactForm.js"></script>
   <script defer src="./assets/scripts/alien.js"></script>
   <script defer src="./assets/scripts/request.js"></script>
+  <script defer src="./assets/scripts/contactForm.js"></script>
   <script defer src="./assets/scripts/app.js"></script>
-
-
 
 </head>
 
@@ -116,6 +114,18 @@
         </div>
         <input type="submit" id="submit" value="Send">
       </form>
+
+      <div id="form-submit-missing-message" class="form-submit-message missing">
+        <p>All fields are mandatory. Please try again.</p>
+      </div>
+      <div id="form-submit-success-message" class="form-submit-message success">
+        <p>Thank you! Your message has been sent.</p>
+        <p>Check your inbox for an automated response.</p>
+      </div>
+      <div id="form-submit-error-message" class="form-submit-message error">
+        <p>Oops! It seems our mailing service is having some trouble right now.</p>
+        <p>Please try again later or contact me through my social media.</p>
+      </div>
     </div>
   </aside>
 
