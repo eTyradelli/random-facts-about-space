@@ -9,6 +9,7 @@ This is a purely frontend website that I build to better understant various aspe
 - Local Storage API to save "pinned" and "viewed" cards
 - Responsive layout with Flexbox
 - Filters
+- Working contact form with client-side validation
 
 ### Technologies used
 
@@ -19,6 +20,7 @@ This is a purely frontend website that I build to better understant various aspe
 - Local Storage API
 - Intersection Observer API
 - APOD API
+- Emailjs
 
 ### Continued development
 

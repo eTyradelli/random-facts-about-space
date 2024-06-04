@@ -36,7 +36,6 @@ submitBtn.addEventListener("click", function (e) {
   });
 
   // All fields completed State
-
   validateForm();
 
   // If all is well, submit

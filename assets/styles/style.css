@@ -425,6 +425,7 @@ aside.active {
   right: 0;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.6);
+  overflow-y: scroll;
 }
 
 aside.active ~ *,
@@ -1154,6 +1155,7 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   padding: 10px 0;
+  margin-bottom: 30px;
   font-weight: 500;
   font-family: var(--ff-main);
   letter-spacing: 0.7px;
