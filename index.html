@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/style.css" />
+  <link rel="stylesheet" href="./assets/styles/sidebar.css" />
+  <link rel="stylesheet" href="./assets/styles/contact-form.css" />
+  <link rel="stylesheet" href="./assets/styles/alien.css" />
+  <link rel="stylesheet" href="./assets/styles/card.css" />
+  <link rel="stylesheet" href="./assets/styles/loader.css" />
+  <link rel="stylesheet" href="./assets/styles/modal-popup.css" />
   <title>Random facts about space | Home</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -30,48 +36,48 @@
 
 </head>
 
-<body id="body" style="overflow: visible">
-  <header id="header" class="logo">
-    <div id="logo" class="logo">
-      <img src="./assets/images/full-moon.svg" alt="" id="logo-img">
+<body id="body" class="body" style="overflow: visible">
+  <header id="header" class="header">
+    <div id="logo" class="header__logo">
+      <img src="./assets/images/full-moon.svg" alt="" id="logo-img" class="header__logo-img">
     </div>
-    <div id="nav-toggle" class="nav-toggle">
-      <div class="toggle-line"></div>
-      <div class="toggle-line"></div>
-      <div class="toggle-line"></div>
+    <div id="nav-toggle" class="header__nav-toggle">
+      <div class="header__nav-toggle--line"></div>
+      <div class="header__nav-toggle--line"></div>
+      <div class="header__nav-toggle--line"></div>
     </div>
   </header>
 
   <main id="main">
-    <h1 id="main-title">Random facts about space</h1>
-    <div id="filter-bar" class="filter-bar">
-      <ul id="filters" class="filters">
+    <h1 id="main-title" class="main__title">Random facts about space</h1>
+    <div id="filter-bar" class="main__filter-bar">
+      <ul id="filters" class="filter-bar__filters filters">
         <li class="filter filter-all active">All</li>
         <li class="filter filter-pinned">Pinned</li>
         <li class="filter filter-new">New</li>
       </ul>
     </div>
-    <div id="main-container" class="main-container">
+    <div id="main-container" class="main__container">
     </div>
   </main>
 
-  <div id="modal-popup">
-    <div id="modal-nav-toggle" class="modal-nav-toggle">
-      <div class="modal-toggle-line"></div>
-      <div class="modal-toggle-line"></div>
-      <div class="modal-toggle-line"></div>
+  <div id="modal-popup" class="modal">
+    <div id="modal-nav-toggle" class="modal__nav-toggle">
+      <div class="modal__nav-toggle--line"></div>
+      <div class="modal__nav-toggle--line"></div>
+      <div class="modal__nav-toggle--line"></div>
     </div>
-    <div id="modal-popup-inner" class="modal-popup-inner">
+    <div id="modal-popup-inner" class="modal__inner">
     </div>
   </div>
 
-  <aside id="aside" class="">
-    <div id="aside-main" class="aside-main active">
-      <div id="socials" class="socials">
+  <aside id="aside" class="aside">
+    <div id="aside-main" class="aside__main active">
+      <div id="socials" class="aside__socials">
         <p>This website is a WIP, made with love and with the help of <a href="https://apod.nasa.gov/apod/astropix.html"
             target="_blank">APOD</a>.</p>
         <!-- <p><a href="">See the source code on GitHub.</a></p> -->
-        <h2 class="about">
+        <h2 class="aside__title">
           Connect with me:
         </h2>
         <a href="https://www.linkedin.com/in/eleanatyradelli/" target="_blank"><i
@@ -79,27 +85,27 @@
         <a href="https://github.com/eTyradelli" target="_blank"><i class="fa-brands fa-github"></i></a>
         <a href="https://codepen.io/eTyradelli" target="_blank"><i class="fa-brands fa-codepen"></i></a>
 
-        <h2 class="about">
+        <h2 class="aside__title">
           Or message me:
         </h2>
-        <a href="#" id="open-contact" class="open-contact"><span class="open-contact">Open contact form </span><i
-            class="fa-solid fa-chevron-right open-contact"></i></a>
+        <a href="#" id="open-contact" class="aside__open-contact"><span class="aside__open-contact">Open contact
+            form </span><i class="fa-solid fa-chevron-right aside__open-contact"></i></a>
       </div>
-      <div id="speech-bubble" class="speech-bubble">
-        <div id="speech-container">
+      <div id="speech-bubble" class="aside__speech-bubble">
+        <div id="speech-container" class="aside__speech-container">
         </div>
-        <button id="translate">Translate</button>
+        <button id="translate" class="aside__speech-translate-btn">Translate</button>
       </div>
-      <div class="little-bubble little-bubble-one"></div>
-      <div class="little-bubble little-bubble-two"></div>
+      <div class="aside__speech-little-bubble little-bubble--one"></div>
+      <div class="aside__speech-little-bubble little-bubble--two"></div>
       <img src="./assets/images/extraterrestrial.svg" alt="" class="alien">
     </div>
-    <div id="aside-contact-form" class="aside-contact-form ">
-      <a href="#" class="close-contact"><i class="fa-solid fa-chevron-left close-contact"></i><span
-          class="close-contact"> Back</span></a>
-      <h2>Send me a message</h2>
+    <div id="aside-contact-form" class="aside__contact-form-container">
+      <a href="#" class="aside__close-contact"><i class="fa-solid fa-chevron-left aside__close-contact"></i><span
+          class="aside__close-contact"> Back</span></a>
+      <h2 class="aside__title">Send me a message</h2>
 
-      <form id="contact-form" autocomplete="on" class="contact-form">
+      <form id="contact-form" autocomplete="on" class="contact-form aside__contact-form">
         <div class="form-field">
           <input type="text" id="name" name="name" class="form-user-input" required>
           <label for="name">Name <span aria-hidden="true">*</span></label>

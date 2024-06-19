@@ -1,0 +1,155 @@
+/* CONTACT FORM*/
+
+.form-field {
+  margin: 60px 0 30px;
+  position: relative;
+}
+
+label {
+  display: block;
+  position: absolute;
+  top: 18px;
+  -webkit-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  z-index: 1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="submit"] {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.7);
+  color: hsl(var(--clr-white) / 1);
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  height: 43px;
+  max-width: 100%;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border-bottom: 2px solid hsl(var(--clr-white) / 1);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  background: transparent;
+}
+
+input[type="text"]:focus,
+input[type="text"]:focus-within,
+input[type="text"]:focus-visible,
+input[type="email"]:focus,
+input[type="email"]:focus-within,
+input[type="email"]:focus-visible,
+textarea:focus,
+textarea:focus-within,
+textarea:focus-visible {
+  outline: none;
+  border-bottom: 2px solid hsl(var(--clr-purple-highlight) / 1);
+}
+
+input[type="text"]:focus ~ label,
+input[type="text"]:focus-within ~ label,
+input[type="text"]:focus-visible ~ label,
+input[type="email"]:focus ~ label,
+input[type="email"]:focus-within ~ label,
+input[type="email"]:focus-visible ~ label,
+textarea:focus ~ label,
+textarea:focus-within ~ label,
+textarea:focus-visible ~ label,
+label.focused-label {
+  font-size: 14px;
+  top: -30px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: hsl(var(--clr-blue-accent));
+  color: hsl(var(--clr-white));
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-family: var(--ff-main);
+  letter-spacing: 0.7px;
+  font-size: var(--fs-400);
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background: hsl(var(--clr-purple-accent));
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  background: transparent !important;
+  color: hsl(var(--clr-white) / 1) !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: hsl(var(--clr-white) / 1);
+  -webkit-box-shadow: 0 0 0px 1000px hsl(var(--clr-blue-dark) / 1) inset;
+}
+
+.form-submit-message {
+  display: none;
+  margin-top: 20px;
+  padding: 17px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 hsl(var(--clr-black) / 0.7);
+  transform: rotate(0);
+  transition: all 0.03s linear;
+}
+
+.form-submit-message.success {
+  background: hsl(var(--clr-message-green) / 0.6);
+}
+
+.form-submit-message.error {
+  background: hsl(var(--clr-message-red) / 0.6);
+}
+
+.form-submit-message.error-message {
+  background: hsl(var(--clr-purple-accent) / 0.8);
+}
+
+.form-submit-message.active {
+  display: block;
+}
+
+.form-submit-message.active:hover {
+  box-shadow: 0 0 20px 3px hsl(var(--clr-black) / 0.5);
+  transform: rotate(1deg);
+}
+
+.form-submit-message p:not(:first-child) {
+  margin-top: 10px;
+}

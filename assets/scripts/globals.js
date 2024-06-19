@@ -5,8 +5,8 @@ const navToggle = document.getElementById("nav-toggle");
 
 // Modal for data cards
 const modalPopup = document.getElementById("modal-popup");
-const modalPopupInner = document.querySelector(".modal-popup-inner");
-const modalCloseBtn = modalPopup.querySelector(".modal-nav-toggle");
+const modalPopupInner = document.querySelector(".modal__inner");
+const modalCloseBtn = modalPopup.querySelector(".modal__nav-toggle");
 
 // Main
 const body = document.getElementById("body");

@@ -232,10 +232,10 @@ function clickCallBack(e) {
     toggleScroll(body, modalPopup);
     populatePopup(el);
     setViewedItem(el);
-  } else if (el.classList.contains("open-contact")) {
+  } else if (el.classList.contains("aside__open-contact")) {
     toggleActive(sideBarMain);
     toggleActive(sideBarContactForm);
-  } else if (el.classList.contains("close-contact")) {
+  } else if (el.classList.contains("aside__close-contact")) {
     toggleActive(sideBarMain);
     toggleActive(sideBarContactForm);
   } else {
