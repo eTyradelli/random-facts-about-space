@@ -1,7 +1,7 @@
 {
   "name": "random-facts-space",
   "version": "1.0.0",
-  "description": "A little website that requests and print data from the APOD API by NASA.",
+  "description": "A little website that requests and prints data from the APOD API by NASA.",
   "main": "app.js",
   "scripts": {},
   "author": "Eleana Tyradelli",
