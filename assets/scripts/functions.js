@@ -3,10 +3,16 @@
 // Functions HTML creation
 
 function loadPinnedItems() {
-  pinnedItems.forEach((itemData) => {
-    var html = createHtml(itemData, "pinned");
-    mainContainer.insertAdjacentHTML("beforeend", html);
-  });
+  pinnedContainer.innerHTML = "";
+  if(pinnedItems?.length){
+    pinnedCount.textContent = pinnedItems.length;
+    pinnedItems.forEach((itemData) => {
+      var html = createHtml(itemData, "pinned");
+      pinnedContainer.insertAdjacentHTML("beforeend", html);
+    });
+  }else{
+    pinnedContainer.innerHTML = "<p>You haven't pinned any cards yet!</p>";
+  }
 }
 
 function createHtml(
@@ -105,6 +111,7 @@ function pinItem(el) {
     let pinnedCardInfo = { title, url, explanation };
     pinnedItems.push(pinnedCardInfo);
     localStorage.setItem(`pinnedItems`, JSON.stringify(pinnedItems));
+    loadPinnedItems();
   } else {
     return;
   }
@@ -119,10 +126,12 @@ function unpinItem(el) {
     pinnedItems.splice(idx, 1);
     localStorage.removeItem(`pinnedItems`);
     localStorage.setItem(`pinnedItems`, JSON.stringify(pinnedItems));
+    pinnedCount.textContent = pinnedItems.length;
   } else {
     return;
   }
 }
+
 
 // Handle filters
 
@@ -135,22 +144,16 @@ function filterItms(e) {
 
   // Check which filter was clicked and decide which cards will be affected.
   if (el.classList.contains("filter-pinned")) {
-    cards.forEach((card) => {
-      card.classList.contains("pinned")
-        ? (card.style.display = "grid")
-        : (card.style.display = "none");
-    });
+    pinnedContainer.style.display = "grid";
+    mainContainer.style.display = "none";
     observer.unobserve(footer);
   } else if (el.classList.contains("filter-new")) {
-    cards.forEach((card) => {
-      !card.classList.contains("pinned")
-        ? (card.style.display = "grid")
-        : (card.style.display = "none");
-    });
+    pinnedContainer.style.display = "none";
+    mainContainer.style.display = "grid";
     observer.observe(footer);
   } else {
     cards.forEach((card) => {
-      card.style.display = "grid";
+      mainContainer.style.display = "grid";
     });
     observer.observe(footer);
   }

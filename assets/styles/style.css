@@ -405,17 +405,27 @@ footer {
   border: 2px solid hsl(var(--clr-purple-highlight));
 }
 
+.filter sup{
+  color: hsl(var(--clr-green-highlight));
+}
+
 /* Cards Container */
 
-.main__container {
+.main__container,
+.pinned__container {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 30px;
 }
 
+.pinned__container {
+  display: none;
+}
+
 @media (max-width: 40.625em) {
-  .main__container {
+  .main__container,
+  .pinned__container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 20px;

@@ -11,8 +11,10 @@ const modalCloseBtn = modalPopup.querySelector(".modal__nav-toggle");
 // Main
 const body = document.getElementById("body");
 const filters = document.querySelectorAll(".filter");
+const pinnedCount = document.querySelector("sup");
 const main = document.getElementById("main");
 const mainContainer = document.getElementById("main-container");
+const pinnedContainer = document.getElementById("pinned-container");
 
 // Sidebar
 const sideBar = document.getElementById("aside");

@@ -2,14 +2,21 @@
 
 // This is populated everytime getData() is called.
 let cards;
+// const pinnedItems =
+//   localStorage.getItem("pinnedItems") !== null
+//     ? [...JSON.parse(localStorage.getItem("pinnedItems"))]
+//     : [];
+
+// if (pinnedItems?.length) {
+//   loadPinnedItems();
+// }
 const pinnedItems =
   localStorage.getItem("pinnedItems") !== null
     ? [...JSON.parse(localStorage.getItem("pinnedItems"))]
     : [];
+    
+loadPinnedItems();
 
-if (pinnedItems?.length) {
-  loadPinnedItems();
-}
 let viewedItems =
   localStorage.getItem("viewedItems") !== null
     ? [...JSON.parse(localStorage.getItem("viewedItems"))]

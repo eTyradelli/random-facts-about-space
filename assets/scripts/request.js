@@ -62,7 +62,8 @@ async function getData() {
       });
     });
   } catch (err) {
-    const errorHtml = createErrorContainer(err);
-    mainContainer.insertAdjacentHTML("afterbegin", errorHtml);
+    // const errorHtml = createErrorContainer(err);
+    // mainContainer.insertAdjacentHTML("afterbegin", errorHtml);
+    console.log(err)
   }
 }
