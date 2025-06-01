@@ -31,7 +31,7 @@ function createHtml(
         </div>
         <div class="img-container">
         ${
-          url.match("embed")
+          url.match("youtube") || url.match("vimeo")
             ? `<iframe src="${url}"></iframe>`
             : `<img src="${url}" />`
         }
@@ -54,7 +54,7 @@ function createPopupHtml({ title, url, explanation, copyright }) {
   return `
         <div class='img-container'>
           ${
-            url.match("embed")
+            url.match("youtube") || url.match("vimeo")
               ? `<iframe src="${url}"></iframe>`
               : `<img src="${url}" />`
           }
