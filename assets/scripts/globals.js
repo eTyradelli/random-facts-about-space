@@ -10,6 +10,7 @@ const modalCloseBtn = modalPopup.querySelector(".modal__nav-toggle");
 
 // Main
 const body = document.getElementById("body");
+const starsWrapper = document.querySelector("#stars-wrapper");
 const filters = document.querySelectorAll(".filter");
 const pinnedCount = document.querySelector("sup");
 const main = document.getElementById("main");

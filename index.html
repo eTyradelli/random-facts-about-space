@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles/style.css" />
+  <link rel="stylesheet" href="./assets/styles/stars.css" />
   <link rel="stylesheet" href="./assets/styles/sidebar.css" />
   <link rel="stylesheet" href="./assets/styles/contact-form.css" />
   <link rel="stylesheet" href="./assets/styles/alien.css" />
@@ -34,6 +35,7 @@
   </script>
 
   <script defer src="./assets/scripts/globals.js"></script>
+  <script defer src="./assets/scripts/stars.js"></script>
   <script defer src="./assets/scripts/functions.js"></script>
   <script defer src="./assets/scripts/alien.js"></script>
   <script defer src="./assets/scripts/request.js"></script>
@@ -43,6 +45,8 @@
 </head>
 
 <body id="body" class="body" style="overflow: visible">
+  <div id="stars-wrapper" class="stars-wrapper">
+  </div>
   <header id="header" class="header">
     <div id="logo" class="header__logo">
       <img src="./assets/images/full-moon.svg" alt="" id="logo-img" class="header__logo-img">
@@ -59,7 +63,7 @@
     <div id="filter-bar" class="main__filter-bar">
       <ul id="filters" class="filter-bar__filters filters">
         <li class="filter filter-new active">New</li>
-        <li class="filter filter-pinned">Pinned <sup>  </sup></li>
+        <li class="filter filter-pinned">Pinned <sup>0</sup></li>
       </ul>
     </div>
     <div id="main-container" class="main__container">

@@ -12,7 +12,12 @@
   min-height: 400px;
   border-radius: 10px;
   padding: 30px;
-  background: hsl(var(--clr-blue-medium));
+  background: hsl(var(--clr-blue-glass) / 0.15);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   -webkit-transform: translateY(0px);
   -ms-transform: translateY(0px);
@@ -24,17 +29,9 @@
 
   
   -webkit-transition: opacity 0.15s ease 0.12s, -webkit-transform 0.15s ease-in;
-
-  
   transition: opacity 0.15s ease 0.12s, -webkit-transform 0.15s ease-in;
-
-  
   -o-transition: transform 0.15s ease-in, opacity 0.15s ease 0.12s;
-
-  
   transition: transform 0.15s ease-in, opacity 0.15s ease 0.12s;
-
-  
   transition: transform 0.15s ease-in, opacity 0.15s ease 0.12s, -webkit-transform 0.15s ease-in;
   -webkit-transition: opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete, -webkit-transform 0.15s ease-in;
   transition: opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete, -webkit-transform 0.15s ease-in;

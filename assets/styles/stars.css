@@ -1,0 +1,46 @@
+:root {
+  --twinkle-duration: 5s;
+}
+
+.stars-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(hsl(var(--clr-blue-dark) / 1),hsl(var(--clr-purple-dark) / 1));
+    overflow: hidden;
+}
+
+.star{
+    fill: white;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+          animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+}
+.stars:nth-child(2) {
+  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.33);
+          animation-delay: calc(var(--twinkle-duration) * -0.33);
+}
+.stars:nth-child(3) {
+  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.66);
+          animation-delay: calc(var(--twinkle-duration) * -0.66);
+}
+@-webkit-keyframes twinkle {
+  25% {
+    opacity: 0;
+  }
+}
+@keyframes twinkle {
+  25% {
+    opacity: 0;
+  }
+}

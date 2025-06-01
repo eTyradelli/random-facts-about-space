@@ -54,8 +54,8 @@
   /* overflow-y: scroll; */
 }
 
-.aside.active ~ *,
-*:has(~ aside.active) {
+.aside.active ~ *:not(.stars-wrapper),
+*:has(~ aside.active):not(.stars-wrapper) {
   width: calc(100% - 350px);
 }
 
