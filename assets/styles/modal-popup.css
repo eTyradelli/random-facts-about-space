@@ -15,9 +15,11 @@
 }
 
 .modal__inner {
-  width: clamp(600px, 50%, 60vw);
+  /* width: clamp(600px, 50%, 60vw); */
   overflow-y: auto;
-  max-height: 95vh;
+  /* max-height: 95vh; */
+  width: calc(100vw - 50px);
+  height: calc(100vh - 50px);
   background: hsl(var(--clr-blue-medium));
   position: absolute;
   top: 50%;
@@ -26,7 +28,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 15px;
-  padding: 40px 50px;
+  /* padding: 40px 50px; */
   -webkit-transition: opacity 0.3s ease-in;
   -o-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
@@ -52,8 +54,8 @@
 
 .modal__nav-toggle {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 48px;
+  right: 40px;
   z-index: 5;
 }
 
@@ -97,12 +99,51 @@
 
 .modal__inner h2 {
   font-size: var(--fs-800);
+  padding-bottom: 1em;
+}
+
+.modal__inner .img-container {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    /* height: unset; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+}
+
+.modal__inner .img-container:hover .img-overlay,
+.modal__inner .img-container:hover .img-copyright{
+    transform: translateY(100%);
 }
 
 .modal__inner img {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  z-index: 0;
+}
+
+.modal__inner .img-overlay{
+  height: 20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: hsl(var(--clr-blue-black) / 0);
+  background: linear-gradient(0deg, hsl(var(--clr-blue-black) / .7) 0%, hsl(var(--clr-blue-black) / 0) 80%);
+  position: absolute;
+  z-index: 1;
+
+  transition: all .3s ease;
+}
+
+.modal__inner .img-copyright {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  z-index: 2;
+  transition: all .3s ease;
 }
 
 .modal__inner iframe {
@@ -111,10 +152,22 @@
   aspect-ratio: 16 / 9;
 }
 
+.modal__inner .text-container{
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media(max-width: 70em){
+  .modal__inner .img-container {
+    height: 100%;
+}
+}
+
 @media (max-width: 49.313em) {
   .modal__inner {
     width: 95vw;
-    padding: 30px;
+    /* padding: 30px; */
     top: 10px;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
@@ -126,4 +179,8 @@
     right: 25px;
     top: 30px;
   }
+
+  .modal__inner .text-container{
+  padding: 30px;
+}
 }

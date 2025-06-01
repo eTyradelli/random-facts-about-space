@@ -46,20 +46,21 @@ function createHtml(
 
 function createPopupHtml({ title, url, explanation, copyright }) {
   return `
-    <div class="card-top">
-            <h2>${title}</h2>
-        </div>
         <div class='img-container'>
-        ${
-          url.match("embed")
-            ? `<iframe src="${url}"></iframe>`
-            : `<img src="${url}" />`
-        }
+          ${
+            url.match("embed")
+              ? `<iframe src="${url}"></iframe>`
+              : `<img src="${url}" />`
+          }
+          <div class="img-overlay"></div>
+          <div class="img-copyright">Img ©: ${
+            !copyright ? "NASA" : copyright
+          }</div>
         </div>
-        <div class="img-copyright">Img ©: ${
-          !copyright ? "NASA" : copyright
-        }</div>
         <div class='text-container'>
+            <div class="card-top">
+                <h2>${title}</h2>
+            </div>
             <p class="card-explanation full"">${explanation}</p>
         </div>
     `;
