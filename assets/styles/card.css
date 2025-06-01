@@ -28,13 +28,7 @@
   opacity: 1;
 
   
-  -webkit-transition: opacity 0.15s ease 0.12s, -webkit-transform 0.15s ease-in;
-  transition: opacity 0.15s ease 0.12s, -webkit-transform 0.15s ease-in;
-  -o-transition: transform 0.15s ease-in, opacity 0.15s ease 0.12s;
-  transition: transform 0.15s ease-in, opacity 0.15s ease 0.12s;
-  transition: transform 0.15s ease-in, opacity 0.15s ease 0.12s, -webkit-transform 0.15s ease-in;
   -webkit-transition: opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete, -webkit-transform 0.15s ease-in;
-  transition: opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete, -webkit-transform 0.15s ease-in;
   -o-transition: transform 0.15s ease-in, opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete;
   transition: transform 0.15s ease-in, opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete;
   transition: transform 0.15s ease-in, opacity 0.25s ease 0.25s, display 0s ease 0.45s allow-discrete, -webkit-transform 0.15s ease-in;
